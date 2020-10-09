@@ -1,19 +1,17 @@
-import React from 'react'
-import Button from 'react-bootstrap/Button'
-import Jumbotron from 'react-bootstrap/Jumbotron'
+import React from "react";
+import Section from "./Section";
 
-function Article() {
-    return (
-        <Jumbotron>
-        <h1>Hello, world!</h1>
-        <p>
-         Contenido de ejemplo - Resumen Clase 01
-        </p>
-        <p>
-          <Button variant="primary">Ver Mas</Button>
-        </p>
-      </Jumbotron>
-    )
+import Card from "react-bootstrap/Card";
+
+function Article({ title }) {
+  return (
+    <Card className="card bg-secondary text-white">
+      <div className="card-header">{title}</div>
+      <div className="card-body">
+        <Section title="Section 01" content="Cotenido 1" link="/#" />
+      </div>
+    </Card>
+  );
 }
 
-export default Article
+export default Article;

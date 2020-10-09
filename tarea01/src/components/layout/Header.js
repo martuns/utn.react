@@ -1,17 +1,17 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
-
-
+import { Col, Row } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <React.Fragment>
-      <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">
-           UTN. REACT 
-        </Navbar.Brand>
-      </Navbar>
-    </React.Fragment>
+    <Navbar expand="lg" bg="dark" variant="dark">
+      <Row>
+        <Col sm={6} lg={6}>
+          {" "}
+          <Navbar.Brand href="#home">UTN. REACT</Navbar.Brand>
+        </Col>
+      </Row>
+    </Navbar>
   );
 };
 

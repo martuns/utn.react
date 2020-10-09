@@ -1,19 +1,34 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
 
+const navItems = [
+  {
+    title: "Home",
+    link: "/home",
+  },
+  {
+    title: "About",
+    link: "/about",
+  },
+  {
+    title: "Portfolio",
+    link: "/portfolio",
+  },
+  {
+    title: "Contact",
+    link: "/contact",
+  },
+];
+
 function MenuNav() {
   return (
     <React.Fragment>
       <Nav defaultActiveKey="/home" as="ul">
-        <Nav.Item as="li">
-          <Nav.Link href="/home">Home</Nav.Link>
+      {navItems.map((nav, index) => (
+        <Nav.Item as="li" key={nav.title + index}>
+          <Nav.Link href={nav.link}>{nav.title}</Nav.Link>
         </Nav.Item>
-        <Nav.Item as="li">
-          <Nav.Link eventKey="link-1">Clase 01</Nav.Link>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Nav.Link eventKey="link-2">Clase 02</Nav.Link>
-        </Nav.Item>
+       ))}
       </Nav>
     </React.Fragment>
   );

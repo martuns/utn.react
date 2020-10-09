@@ -1,19 +1,28 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import SocialMedia from "../SocialMedia";
+import Brand from "../Brand";
 
-import Jumbotron from "react-bootstrap/Jumbotron";
+import Card from "react-bootstrap/Card";
 
 const Footer = () => {
   return (
-    <Jumbotron fluid>
-      <Container>
-        <h1>Footer</h1>
-        <p>
-          This is a modified jumbotron that occupies the entire horizontal space
-          of its parent.
-        </p>
+    <Card className="card bg-dark text-white">
+      <Container className="card-body">
+       <Row >
+              <Col sm={5} lg={5}>
+                <SocialMedia />
+              </Col>
+              <Col sm={3} lg={3}>
+               { }
+               
+              </Col>
+              <Col sm={4} lg={4}>
+                <Brand />
+              </Col>
+            </Row>
       </Container>
-    </Jumbotron>
+    </Card>
   );
 };
 

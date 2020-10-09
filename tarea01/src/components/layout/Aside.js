@@ -1,18 +1,20 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 
-import Image from 'react-bootstrap/Image'
+import Card from "react-bootstrap/Card";
+import Image from "react-bootstrap/Image";
 
-const Aside = () => {
+const Aside = ({ title, image }) => {
   return (
-    <React.Fragment>
-      <Row>
-        <Col xs={12} md={12}>
-            <h2>Imagen Random</h2>
-          <Image src="./images/descarga.jfif" rounded  fluid />
-        </Col>
-      </Row>
-    </React.Fragment>
+    <Card  className="card-body bg-primary text-white ">
+      <div className="card-header">
+        {" "}
+        <h3>{title}</h3>
+      </div>
+      <div class="card-body">
+        <Image src={image} rounded fluid />
+      </div>
+    </Card>
   );
 };
 
